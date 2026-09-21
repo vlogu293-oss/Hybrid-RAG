@@ -1,0 +1,36 @@
+{
+  "project": "Hybrid RAG",
+  "evaluation_framework": "Ragas",
+  "metrics": [
+    "faithfulness",
+    "answer_relevancy",
+    "context_precision"
+  ],
+  "total_questions": 3,
+  "successful_questions": 3,
+  "results": [
+    {
+      "question": "What is the architecture of the Spotify web application?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.888412854272524,
+      "context_precision": 0.94999999997625
+    },
+    {
+      "question": "What technologies are used in the architecture?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9999997198937915,
+      "context_precision": 0.999999999975
+    },
+    {
+      "question": "How do the application components communicate?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9800484700132396,
+      "context_precision": 0.8333333332916666
+    }
+  ],
+  "averages": {
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.956153681393185,
+    "context_precision": 0.9277777777476389
+  }
+}

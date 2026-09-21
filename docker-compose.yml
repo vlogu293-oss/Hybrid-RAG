@@ -1,0 +1,45 @@
+services:
+
+  hybrid-rag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: hybrid-rag-app
+
+    env_file:
+      - .env
+
+    expose:
+      - "8501"
+
+    volumes:
+      - ./Backend/data:/app/Backend/data
+      - ./Backend/vector_store:/app/Backend/vector_store
+      - ./Backend/evals:/app/Backend/evals
+
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+
+    container_name: hybrid-rag-caddy
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+    depends_on:
+      - hybrid-rag
+
+    restart: unless-stopped
+
+
+volumes:
+  caddy_data:
+  caddy_config:

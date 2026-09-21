@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is the architecture of the Spotify web application?",
+    "reference": "The Spotify web application architecture consists of the components and interactions described in the provided architecture document."
+  },
+  {
+    "question": "What technologies are used in the architecture?",
+    "reference": "The technologies are those explicitly described in the Spotify web application architecture document."
+  },
+  {
+    "question": "How do the application components communicate?",
+    "reference": "The communication mechanisms are described in the architecture document and should be answered from the retrieved context."
+  }
+]
