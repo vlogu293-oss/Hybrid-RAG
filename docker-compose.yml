@@ -11,7 +11,7 @@ services:
       - .env
 
     expose:
-      - "8501"
+      - "8501:8501"
 
     volumes:
       - ./Backend/data:/app/Backend/data
